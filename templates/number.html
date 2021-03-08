@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div style="padding: 20px; background-color: lightgreen">
+        {% if number|divisibleby:"2" %}
+           {{number}} is <b> even number</b>
+        {% else %}
+            {{number}} is <del>odd number</del>
+        {% endif %}
+        {% if text %}
+        <br>
+            {% include "slug.html" with text=text %}
+        {% endif %}
+    </div>
+    <a href="{% url 'index' %}">To the index page</a>
+
+{% endblock %}

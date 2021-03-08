@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div style="padding: 20px; background-color: lightblue"> This is the index Page!</div>
+    <a href="{% url 'first' %}">To the first page</a>
+    <br>
+    <a href="{% url 'articles' %}">To the articles page</a>
+    <br>
+    <a href="{% url 'archive' %}">To the archive page</a>
+{% endblock %}

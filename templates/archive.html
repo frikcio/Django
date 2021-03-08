@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {%if number %}
+        <br> Through
+        {%if number|divisibleby:"2" %}
+           {{number}} is <b> even number</b>
+        {%else%}
+            {{number}} is <del>odd number</del>
+        {%endif%}
+        to
+    {%endif%}
+    <div style="padding: 20px; background-color: red"> This is the Archive PAge!</div>
+    <a href="{% url 'index' %}"> To the index page </a>
+{% endblock %}
